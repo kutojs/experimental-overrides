@@ -4,11 +4,33 @@ function n(...e) {
 function r(e) {
   window.enmity.plugins.registerPlugin(e);
 }
+
 function I(e) {
   return window.enmity.plugins.installPlugin(e);
 }
 
-const y = window.enmity.modules.common.React;
+const j = window.enmity.modules.common.Dialog;
+window.enmity.modules.common.Token,
+  window.enmity.modules.common.REST,
+  window.enmity.modules.common.Settings,
+  window.enmity.modules.common.Users,
+  window.enmity.modules.common.Navigation,
+  window.enmity.modules.common.NavigationNative,
+  window.enmity.modules.common.NavigationStack,
+  window.enmity.modules.common.Theme,
+  window.enmity.modules.common.Linking,
+  window.enmity.modules.common.StyleSheet,
+  window.enmity.modules.common.ColorMap,
+  window.enmity.modules.common.Components,
+  window.enmity.modules.common.Locale,
+  window.enmity.modules.common.Profiles,
+  window.enmity.modules.common.Lodash,
+  window.enmity.modules.common.Logger,
+  window.enmity.modules.common.Flux,
+  window.enmity.modules.common.SVG,
+  window.enmity.modules.common.Scenes;
+
+const p = window.enmity.modules.common.React;
 window.enmity.modules.common.Dispatcher,
   window.enmity.modules.common.Storage,
   window.enmity.modules.common.Toasts;
@@ -35,7 +57,7 @@ function K() {
   a.reload();
 }
 var W = ({ pluginUrl: e }) =>
-  y.createElement(D, {
+  p.createElement(D, {
     label: 'Update Plugin',
     trailing: D.Arrow,
     onPress: () => {
@@ -70,5 +92,12 @@ r({
       set: () => {},
       configurable: !0,
     });
+  },
+  getSettingsPanel({ settings: e }) {
+    return y.createElement(
+      H,
+      { settings: e },
+      y.createElement(W, { pluginUrl: 'https://raw.githubusercontent.com/kutojs/experimental-overrides/main/ExperimentalOverrides.js' })
+    );
   },
 });
