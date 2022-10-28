@@ -4,6 +4,31 @@ function n(...e) {
 function r(e) {
   window.enmity.plugins.registerPlugin(e);
 }
+function I(e) {
+  return window.enmity.plugins.installPlugin(e);
+}
+
+const y = window.enmity.modules.common.React;
+window.enmity.modules.common.Dispatcher,
+  window.enmity.modules.common.Storage,
+  window.enmity.modules.common.Toasts;
+
+const D = o.FormRow;
+o.FormSection,
+  o.FormSelect,
+  o.FormSubLabel,
+  o.FormSwitch,
+  o.FormTernaryCheckBox,
+  o.FormText,
+  o.FormTextColors,
+  o.FormTextSizes;
+
+var U;
+(function (e) {
+  (e[(e.ApplicationCommand = 2)] = 'ApplicationCommand'),
+    (e[(e.MessageComponent = 3)] = 'MessageComponent');
+})(U || (U = {}));
+
 const t = n('isDeveloper');
 
 function K() {
@@ -27,7 +52,7 @@ var W = ({ pluginUrl: e }) =>
   });
 
 r({
-  name: 'Experimental Overrides',
+  name: 'Experimental Mode',
   version: '1.0',
   description: "Enable Discord's experimental mode.",
   color: '#000000',
